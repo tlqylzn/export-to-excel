@@ -1,0 +1,7 @@
+---
+env:
+  jasmine: true
+globals:
+  jest: true
+  # [jasmine-pit](https://www.npmjs.com/package/jasmine-pit)
+  pit: true

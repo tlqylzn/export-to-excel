@@ -1,0 +1,16 @@
+---
+extends: "eslint:recommended"
+
+env:
+  es6: true
+  node: true
+
+ecmaFeatures:
+  modules: true
+
+rules:
+  no-console: 1
+  no-undef:
+    - 2
+  constructor-super:
+    - 2

@@ -1,0 +1,9 @@
+# EditorConfig: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Configuration files
+[**/.eslintrc]
+indent_style = space
+indent_size = 2

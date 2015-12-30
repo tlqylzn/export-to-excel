@@ -1,0 +1,8 @@
+# Ignore all example files
+generators/app/templates/examples
+
+# Ignore transpiled scripts
+lib
+
+# Ignore workflow scripts
+scripts
