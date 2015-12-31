@@ -29,6 +29,11 @@
     "type": "git",
     "url": "tlqylzn/export-to-excel"
   },
+  "keywords": [
+    "export",
+    "xlsx",
+    "excel"
+  ],
   "author": "Tim",
   "license": "MIT",
   "engines": {
