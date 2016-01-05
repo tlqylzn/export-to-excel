@@ -1,6 +1,6 @@
 {
   "name": "export-to-excel",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "导出数据到excel中",
   "main": "index.js",
   "pre-commit": [
