@@ -140,7 +140,7 @@ function fromJSONArray(src, title) {
     var wscols = [];
     title.forEach((obj) => {
         wscols.push({
-            wch: obj. cellWidth
+            wch: obj.cellWidth || 20
         });
     });
     ws['!cols'] = wscols;
