@@ -190,6 +190,8 @@ function exportXLSX(opts) {
     workbook.Sheets[opts.sheetname] = fromJSONArray(opts.data, opts.title);
 
     XLSX.writeFile(workbook, opts.filename + '.xlsx');
+
+    return opts.filename + '.xlsx';
 }
 
 
