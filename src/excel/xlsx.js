@@ -157,37 +157,49 @@ function exportXLSX(opts) {
         Sheets: {}
     };
 
+    let formatData = [];
     if (isArray(opts.title)) {
+        // 格式化列的顺序
+        let titleKeys = [];
+        opts.title.forEach((f) => {
+            titleKeys.push(f.fieldName);
+        });
+        
+        // body 数据
+        opts.data.forEach((obj) => {
+            let rowObj = {};
+
+            // 头部数据
+            titleKeys.forEach((t) => {
+                rowObj[t] = obj[t];
+            });
+            formatData.push(rowObj);
+        });
+
         // 取表格title
         opts.title.forEach((obj) => {
             title[obj.fieldName] = obj.displayName;
         });
 
-        opts.data.unshift(title);
+        formatData.unshift(title);
+        
     } else {
-        debug.log('title必须为array');
-
-        return;
+        return 'title必须为array';
     }
 
     if (!opts.filename) {
-        debug.log('filename不能为空');
-
-        return;
+        return 'filename不能为空';
     }
     if (!opts.sheetname) {
-        debug.log('sheetname不能为空');
-
-        return;
+        return 'sheetname不能为空';
     }
 
-    if (opts.data.length === 1) {
-        debug.log('没有' + opts.sheetname + '数据');
-
-        return;
+    if (formatData.length === 1) {
+        return '没有' + opts.sheetname + '数据';
     }
 
-    workbook.Sheets[opts.sheetname] = fromJSONArray(opts.data, opts.title);
+
+    workbook.Sheets[opts.sheetname] = fromJSONArray(formatData, opts.title);
 
     XLSX.writeFile(workbook, opts.filename + '.xlsx');
 
