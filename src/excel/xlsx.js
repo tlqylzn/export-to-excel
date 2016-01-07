@@ -1,6 +1,7 @@
 import XLSX from 'xlsx';
 import { isArray } from 'lodash';
 import moment from 'moment';
+import debug from 'debug';
 
 function getChangeDisplayField (key, value, title){
     var str;
@@ -183,17 +184,25 @@ function exportXLSX(opts) {
         formatData.unshift(title);
         
     } else {
+        debug.log('title必须为array');
+
         return 'title必须为array';
     }
 
     if (!opts.filename) {
+        debug.log('filename不能为空');
+
         return 'filename不能为空';
     }
     if (!opts.sheetname) {
+        debug.log('sheetname不能为空');
+
         return 'sheetname不能为空';
     }
 
     if (formatData.length === 1) {
+        debug.log('没有' + opts.sheetname + '数据');
+
         return '没有' + opts.sheetname + '数据';
     }
 
