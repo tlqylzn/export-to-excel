@@ -1,7 +1,7 @@
 {
   "name": "export-to-excel",
-  "version": "0.1.10",
-  "description": "导出数据到excel中",
+  "version": "0.1.11",
+  "description": "Export data to Excel",
   "main": "index.js",
   "pre-commit": [
     "lint",
@@ -32,7 +32,8 @@
   "keywords": [
     "export",
     "xlsx",
-    "excel"
+    "excel",
+    "export-to-excel"
   ],
   "author": "Tim",
   "license": "MIT",
@@ -57,9 +58,7 @@
     "run-sequence": "1.1.5"
   },
   "dependencies": {
-    "bluebird": "3.0.6",
     "debug": "2.2.0",
-    "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "xlsx": "^0.8.0"
   }
