@@ -2,26 +2,7 @@
 
 导出数据到excel中
 
-## Transpile
-
-```bash
-gulp
-```
-
-## Test
-
-```bash
-npm test
-```
-
-## Bump up version
-
-```
-npm version <version>
-```
-
-
-## 使用说明
+## Super simple to use
 
 ```
 var exportToExcel = require('export-to-excel');
@@ -37,9 +18,7 @@ var sampleData = [
     "province": "浙江",
     "country": "中国",
     "headimgurl": "http://wx.qlogo.cn/mmopen/s3NiblUuUDR7y3s1DsZibAja25icOumEM4KM79w8pKB5g0o2KKvVDWAqtVuCNVicZIzcqWzOS32ueOvD7tjmRVj2zQ/0",
-    "subscribe_time": 1439719607,
-    "remark": "",
-    "groupid": 0
+    "subscribe_time": 1439719607
   },
   {
     "subscribe": 1,
@@ -51,9 +30,7 @@ var sampleData = [
     "province": "",
     "country": "中国",
     "headimgurl": "http://wx.qlogo.cn/mmopen/PiajxSqBRaELAI1aEUyI3lwJdMwibicvlkF8ASmIhicSYg3n29v2yHibmum2ibmvedvuXnrziaBl46mnrZe6Cb4pSMaXw/0",
-    "subscribe_time": 1431691451,
-    "remark": "",
-    "groupid": 101
+    "subscribe_time": 1431691451
   },
   {
     "subscribe": 0,
@@ -65,15 +42,13 @@ var sampleData = [
     "province": "上海",
     "country": "中国",
     "headimgurl": "http://wx.qlogo.cn/mmopen/PiajxSqBRaELt5V5lD4ficPFvT2Z0ZDOHKc26BHh43NXT41WKFQUzLcdtgvBWn1jcqDSac1ib8PpsezuicNVVcbcicA/0",
-    "subscribe_time": 1442406029,
-    "remark": "",
-    "groupid": 0
+    "subscribe_time": 1442406029
   }
 ];
 
 
 exportToExcel.exportXLSX({
-    filename: '微信粉丝列表(2015-12-30)',
+    filename: '微信粉丝列表(2016-01-01)',
     sheetname: '微信粉丝列表',
     title: [
         {
@@ -128,18 +103,28 @@ exportToExcel.exportXLSX({
             "displayName": "关注时间",
             "cellWidth": 20,
             "type": "datetime"   // 2015-12-12 10:00:00
-        },
-        {
-            "fieldName": "remark",
-            "displayName": "备注",
-            "cellWidth": 10
-        },
-        {
-            "fieldName": "groupid",
-            "displayName": "组",
-            "cellWidth": 8
         }
     ],
     data: sampleData
 })
 ```
+
+
+## Conversion src to lib
+
+```bash
+gulp
+```
+
+## Bump up version
+
+```
+npm version <version>
+```
+
+
+## Resources
+
+- [export-excel-test](https://github.com/tlqylzn/export-excel-test)
+- [SheetJS](https://github.com/SheetJS/js-xlsx)
+- [Examples](https://github.com/tlqylzn/export-excel-test)

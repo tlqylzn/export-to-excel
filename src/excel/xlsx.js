@@ -1,12 +1,11 @@
 import XLSX from 'xlsx';
-import { isArray } from 'lodash';
 import moment from 'moment';
 import debug from 'debug';
 
 function getChangeDisplayField (key, value, title){
     var str;
 
-    title.forEach((obj) => {
+    title.forEach(function(obj) {
         
         if(key === obj.fieldName) {
 
@@ -72,11 +71,11 @@ function fromJSONArray(src, title) {
     };
 
 
-    src.forEach((row, rowIndex) => {
+    src.forEach(function(row, rowIndex) {
         // Iterate through array (rows)
 
         
-        Object.keys(row).forEach((key, cellIndex) => {
+        Object.keys(row).forEach(function(key, cellIndex) {
             //let value = row[key];
             let value = rowIndex ? getChangeDisplayField(key, row[key], title) : row[key];
             let cell, cellRef;
@@ -138,7 +137,7 @@ function fromJSONArray(src, title) {
     }
     // 设置列宽（字符数）
     var wscols = [];
-    title.forEach((obj) => {
+    title.forEach(function(obj) {
         wscols.push({
             wch: obj.cellWidth || 20
         });
@@ -158,26 +157,26 @@ function exportXLSX(opts) {
     };
 
     let formatData = [];
-    if (isArray(opts.title)) {
+    if (Object.prototype.toString.call(opts.title) === '[object Array]') {
         // 格式化列的顺序
         let titleKeys = [];
-        opts.title.forEach((f) => {
+        opts.title.forEach(function(f) {
             titleKeys.push(f.fieldName);
         });
         
         // body 数据
-        opts.data.forEach((obj) => {
+        opts.data.forEach(function(obj) {
             let rowObj = {};
 
             // 头部数据
-            titleKeys.forEach((t) => {
+            titleKeys.forEach(function(t) {
                 rowObj[t] = obj[t];
             });
             formatData.push(rowObj);
         });
 
         // 取表格title
-        opts.title.forEach((obj) => {
+        opts.title.forEach(function(obj) {
             title[obj.fieldName] = obj.displayName;
         });
 
