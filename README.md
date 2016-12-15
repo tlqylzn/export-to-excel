@@ -26,8 +26,8 @@ var sampleData = [
     "nickname": "name2",
     "sex": 1,
     "language": "zh_CN",
-    "city": "",
-    "province": "",
+    "city": "南京",
+    "province": "江苏",
     "country": "中国",
     "headimgurl": "http://wx.qlogo.cn/mmopen/PiajxSqBRaELAI1aEUyI3lwJdMwibicvlkF8ASmIhicSYg3n29v2yHibmum2ibmvedvuXnrziaBl46mnrZe6Cb4pSMaXw/0",
     "subscribe_time": 1431691451
