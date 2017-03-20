@@ -1,6 +1,6 @@
 {
   "name": "export-to-excel",
-  "version": "0.1.11",
+  "version": "0.2.1",
   "description": "Export data to Excel",
   "main": "index.js",
   "pre-commit": [
