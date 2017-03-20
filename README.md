@@ -48,7 +48,7 @@ var sampleData = [
 
 
 exportToExcel.exportXLSX({
-    filename: '微信粉丝列表(2016-01-01)',
+    filename: '微信粉丝列表(2017-01-01)',
     sheetname: '微信粉丝列表',
     title: [
         {
