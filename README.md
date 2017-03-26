@@ -2,7 +2,7 @@
 
 导出数据到excel中
 
-## Super simple to use
+## Super simple to use test
 
 ```
 var exportToExcel = require('export-to-excel');
