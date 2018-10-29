@@ -12,7 +12,7 @@ var sampleData = [
     "subscribe": 1,
     "openid": "o7Zv3s_F0N3-h09fLN3jOIM8WNwzsdsdsdo",
     "nickname": "name1",
-    "sex": 1,
+    "sex": 0,
     "language": "zh_CN",
     "city": "杭州",
     "province": "浙江",
